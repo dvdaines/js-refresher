@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Message Challenge</title>
+  <style>
+    #error-el {
+      color: #f00;
+    }
+    
+    img {
+      border: 1px solid #c8c8c8;
+    }
+  </style>
+</head>
+<body>
+  <img src="shoe.jpg" alt="Nike shoe" width="500" height="auto">  
+  <p>Nike shoe</p>
+  <button id="purchase-btn" onclick="purchase()">Purchase - $149</button>
+  <p id="error-el"></p>
+  <script>
+    function purchase() {
+      let errorEl = document.getElementById("error-el")
+      errorEl.innerText = "Something went wrong, please try again"
+    }
+  </script>
+</body>
+</html>

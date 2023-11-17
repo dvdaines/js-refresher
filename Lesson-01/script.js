@@ -1,30 +1,29 @@
+let count = 0
+
 function increment() {
-  let count = document.getElementById("count-el").innerHTML
-  let newValue = parseInt(count) + 1
-  document.getElementById("count-el").innerHTML = newValue
+  count += 1
+  document.getElementById("count-el").textContent = count
+}
+
+function reset() {
+  count = 0
+  document.getElementById("count-el").textContent = count
+  document.getElementById("save-el").textContent = 'Previous entries:'
 }
 
 function save() {
-  console.log("save")
+  let previousEntries = document.getElementById('save-el')
+  previousEntries.textContent += count + ' - ';
+  count = 0
+  document.getElementById("count-el").textContent = count
 }
 
-function countdown() {
-  for(n = 5; n >= 1; n--) {
-    console.log(n)
-  }
+let myPoints = 3
+
+function add3Points() {
+  myPoints += 3
 }
 
-function fortyTwo() {
-  console.log(42)
+function remove1Point()  {
+  myPoints -= 1
 }
-
-let lap1 = 34
-let lap2 = 33
-let lap3 = 36
-
-function logLapTime() {
-  let totalTime = lap1 + lap2 + lap3
-  console.log(totalTime)
-}
-
-logLapTime()

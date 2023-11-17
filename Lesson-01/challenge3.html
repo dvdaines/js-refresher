@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator Challenge</title>
+  <style>
+  </style>
+</head>
+<body>
+  <input type="text" name="" id="input1">
+  <input type="text" name="" id="input2">
+  <button id="add" onclick="add()">Add</button>
+  <button id="subtract" onclick="subtract()">Subtract</button>
+  <button id="multiply" onclick="multiply()">Multiply</button>
+  <button id="divide" onclick="divide()">Divide</button>
+  <p id="answer-el">Answer: </p>
+  <script>
+    function add() {
+      let valueOne = document.getElementById("input1").value
+      let valueTwo = document.getElementById("input2").value
+
+      let answer = parseFloat(valueOne) + parseFloat(valueTwo)
+
+      let answerEl = document.getElementById("answer-el")
+      answerEl.innerText = "Answer: " + answer
+    }
+
+    function subtract() {
+      let valueOne = document.getElementById("input1").value
+      let valueTwo = document.getElementById("input2").value
+
+      let answer = parseFloat(valueOne) - parseFloat(valueTwo)
+
+      let answerEl = document.getElementById("answer-el")
+      answerEl.innerText = "Answer: " + answer
+    }
+
+    function multiply() {
+      let valueOne = document.getElementById("input1").value
+      let valueTwo = document.getElementById("input2").value
+
+      let answer = parseFloat(valueOne) * parseFloat(valueTwo)
+
+      let answerEl = document.getElementById("answer-el")
+      answerEl.innerText = "Answer: " + answer
+    }
+
+    function divide() {
+      let valueOne = document.getElementById("input1").value
+      let valueTwo = document.getElementById("input2").value
+
+      let answer = parseFloat(valueOne) / parseFloat(valueTwo)
+
+      let answerEl = document.getElementById("answer-el")
+      answerEl.innerText = "Answer: " + answer
+    }
+  </script>
+</body>
+</html>
