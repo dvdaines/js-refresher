@@ -1,0 +1,48 @@
+/* || GENERAL STYLES */
+body {
+  background: url("img/pokertable.jpg");
+  background-size: cover;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+h1 {
+  font-size: 4rem;
+  color: goldenrod;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#message-el {
+  font-style: italic;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  color: #016f32;
+  width: 200px;
+  padding: 10px;
+  background: hsl(43, 74%, 49%);
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+button:last-child {
+  margin-top: .5em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: hsl(43, 74%, 40%);
+  transition: .2s
+}
