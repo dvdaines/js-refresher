@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Return Challenge</title>
+</head>
+<body>
+  <script>
+    let player1Time = 109
+    let player2Time = 107
+
+    function getFastestRaceTime() {
+      if (player1Time > player2Time) {
+        return player1Time
+      } else if (player2Time > player1Time) {
+        return player2Time
+      } else {
+        return player1Time
+      }
+    }
+
+    function getTotalRaceTime() {
+      return player1Time + player2Time
+    }
+
+    let totalRaceTime = getTotalRaceTime()
+    console.log(totalRaceTime)
+  </script>
+</body>
+</html>

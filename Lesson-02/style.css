@@ -37,8 +37,8 @@ button {
   border: none;
 }
 
-button:last-child {
-  margin-top: .5em;
+button[onclick="newCard()"] {
+  margin-top: .5em !important;
 }
 
 button:hover {

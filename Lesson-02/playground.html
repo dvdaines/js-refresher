@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playground</title>
+  <style>
+    main {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    div {
+      max-width: 50%;
+      padding: 1.2rem 0;
+      margin: 1rem auto;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    #apple-shelf {
+      background-color: #EF7674;
+    }
+
+    #orange-shelf {
+      background-color: #FE966E;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="apple-shelf"></div>
+    <div id="orange-shelf"></div>
+  </main>
+  <script>
+    // Generating random integers in a range (1-6)
+    function rollDice() {
+      return Math.floor(6 * Math.random()) + 1
+    }
+
+    // Logical AND operator
+    let hasCompletedCourse = true
+    let givesCertificate = true
+
+    function generateCertificate() {
+      console.log("Generating certificate...")
+    }
+
+    if (hasCompletedCourse && givesCertificate) {
+      generateCertificate()
+    }
+
+    // Logical AND operator and NOT operator
+    let hasSolvedChallenge = false
+    let hasHintsLeft = false
+
+    function showSolution() {
+      console.log("Showing the solution....")
+    }
+
+    if (!hasSolvedChallenge && !hasHintsLeft) {
+      showSolution()
+    }
+
+    // Logical OR operator
+    let likesDocumentaries = false
+    let likesStartups = true
+
+    function recommendMovie() {
+      console.log("You should watch the Fyre festival movie!")
+    }
+
+    if (likesDocumentaries || likesStartups) {
+      recommendMovie()
+    }
+
+    // Creating objects and accessing properties
+    let course = {
+      title: "Learn CSS Grid for free",
+      lessons: 16,
+      creator: "Per Harald Borgen",
+      length: 63,
+      level: 2,
+      isFree: true,
+      tags: ["html", "css"]
+    }
+
+    console.log(course.tags) // Dot notation
+    console.log(course["tags"]) // Bracket notation
+
+    let listing = {
+      title: "Secluded Mountain Hideaway",
+      subtitle: "Private cabin in Colorado",
+      images: ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"],
+      price: 169,
+      hostRating: 4.9,
+      isSuperhost: false
+    }
+
+    console.log(listing.title, listing.price)
+
+    //  Practice: creating objects
+    let person = {
+      name: "Davis",
+      age: 99,
+      country: "Israel"
+    }
+
+    function logData() {
+      console.log(person.name + " is " + person.age + " years old and lives in " + person.country)
+    }
+
+    logData()
+
+  // Practice: if-else 
+  let age = 18
+
+  if (age < 6) {
+    console.log("free")
+  } else if (age < 18) {
+    console.log("child discount")
+  } else if (age < 27) {
+    console.log("student discount")
+  } else if (age < 67) {
+    console.log("full price")
+  } else {
+    console.log("senior citizen discount")
+  }
+
+  // Practice: arrays and for loops
+  let largestCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+  console.log("The 5 largest countries in the world:")
+  for (let i = 0; i < largestCountries.length; i++) {
+    console.log("- " + largestCountries[i])
+  }
+
+  // Practice: arrays - pop, shift, push, unshift
+  let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"]
+  largeCountries.pop() // remove from end
+  largeCountries.shift() // remove from beginning
+  largeCountries.push("Pakistan") // add to end
+  largeCountries.unshift("China") // add to beginning
+  console.log(largeCountries)
+
+  // Practice: if + AND operator
+  let dayOfMonth = 13
+  let weekday = "Friday"
+
+  if (dayOfMonth === 13 && weekday === "Friday") {
+    console.log("😱")
+  }
+
+  // Practice: random numbers
+  function getHand() {
+    let hands = ["rock", "paper", "scissors"]
+    let randomIndex = Math.floor(Math.random() * 3)
+    return hands[randomIndex]
+  }
+  console.log(getHand())
+
+  // Practice: for loops and arrays
+  let fruit = ["🍊", "🍎", "🍎", "🍊" ,"🍎"]
+  let appleShelf = document.getElementById("apple-shelf")
+  let orangeShelf = document.getElementById("orange-shelf")
+
+  function sortFruit() {
+    for (let i = 0; i < fruit.length; i++) {
+      if (fruit[i] === "🍎") {
+        appleShelf.textContent += fruit[i]
+      } else if (fruit[i] = "🍊") {
+        orangeShelf.textContent += fruit[i]
+      }
+    }
+  }
+
+  sortFruit()
+
+  </script>
+</body>
+</html>
