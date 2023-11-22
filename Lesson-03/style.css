@@ -1,0 +1,78 @@
+/* || RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+  --HIGHLIGHT-COLOR: rgb(95, 148, 64);
+  --BUTTON-HOVER-COLOR: rgb(64, 100, 44);
+}
+
+/* || GENERAL STYLES */
+body {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 400px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--HIGHLIGHT-COLOR);
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+input:focus {
+  background-color: #CFDBEC;
+}
+
+button {
+  background-color: var(--HIGHLIGHT-COLOR);
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  transition-duration: .2s;
+}
+
+button:hover {
+  background-color: var(--BUTTON-HOVER-COLOR);
+  cursor: pointer;
+  transition-duration: .2s;
+}
+
+#delete-btn {
+  background-color: #FFF;
+  color: var(--HIGHLIGHT-COLOR);
+  outline: 1px solid var(--HIGHLIGHT-COLOR);
+  outline-offset: -1px;
+}
+
+#delete-btn:hover {
+  background-color: #c8c8c8;
+}
+
+ul {
+  margin-top: 1em;
+  list-style: none;
+}
+
+li {
+  margin: 5px 0;
+}
+
+a {
+  color: var(--HIGHLIGHT-COLOR)
+}

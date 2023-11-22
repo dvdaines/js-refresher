@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main id="main">
+    <div id="container"></div>
+    <button id="score-btn">LOG JANE'S SCORE</button>
+    <div id="team-images-el"></div>
+  </main>
+  <script>
+    // CONST vs. LET
+    // Use const unless you *need* let
+    const playerName = "Per"
+    let credits = 45
+
+    credits = credits - 10 // This will work
+    // playerName = "Jonas" // This will not work
+
+    const basePrice = 520
+    const discount = 120
+    let shippingCost = 12
+    let shippingTime = "5-12 days"
+
+    // These are re-assigned, use let
+    shippingCost = 15
+    shippingTime = "7-14 days"
+
+    const fullPrice = basePrice - discount + shippingCost
+
+    // console.log("Total cost: " + fullPrice + ". It will arrive in " + shippingTime)
+    
+    // Use .innherHTML to render a Buy! button inside the div container
+    const container = document.getElementById("container")
+    container.innerHTML = '<button id="buy-btn">Buy!</button>'
+    const buyBtn = document.getElementById("buy-btn")
+    buyBtn.addEventListener('click', function() {
+      container.innerHTML += "<p>Thank you for buying!</p>"
+    })
+
+    // Template strings / literals
+    const recipient = "Jenny"
+    const sender = "Jeff"
+    const email = `Hey, ${recipient}! How is it going? Cheers ${sender}`
+    console.log(email)
+
+    // TRUTHY AND FALSY VALUES
+    const points = 12
+    if (points > 0) {
+      console.log("Let's play! 😁")
+    } else {
+      console.log("Sorry,  you have no credits 😭")
+    }
+
+    // FALSY
+    // false
+    // 0
+    // ""
+    // null -> how you as a developer signal emptiness
+    // undefined -> how Javascript signals emptiness
+    // NaN
+
+    // Functions with arguments
+    function sayHello(name, age) {
+      console.log(`Hello, my name is ${name}, and I am ${age} years old.`)
+    }
+
+    sayHello("Jenny", 69)
+
+    function add(numberOne, numberTwo) {
+      return numberOne + numberTwo
+    }
+
+    console.log(add(3, 4))
+    console.log(add(9, 102))
+
+    function getFirst(arr) {
+      return arr[0]
+    }
+
+    console.log(getFirst(["first", "second", "third"]))
+
+    // Practicing using let & const appropriately
+    const player = "Jeff"
+    const opponent = "Nick"
+    const game = "AmazingFighter"
+    let gamePoints = 0
+    let hasWon = false
+
+    // PLAYING THE GAME
+    gamePoints += 100
+    hasWon = true
+
+    // ANNOUNCING THE WINNER
+    if (hasWon) {
+      console.log(`${player} got ${gamePoints} and won the ${game} game!`)
+    } else {
+      console.log(`The winner is ${opponent}! ${player} lost the game.`)
+    }
+
+    // Practicing iterating over the elements of an array
+    const myCourses = ["Learn CSS Animations", "UI Design Fundamentals", "Intro to Clean Code"]
+    for (let i = 0; i < myCourses.length; i++) {
+      console.log(myCourses[i])
+    }
+
+    // Practicing using local storage
+    localStorage.setItem("myItem", 10)
+    console.log(localStorage.getItem("myItem"))
+
+    // Practicing addEventListener() and accessing array items
+    let data = [
+      {
+        name: "Jane",
+        score: 52
+      },
+      {
+        name: "Mark",
+        score: 41
+      }
+    ]
+
+    const scoreBtn = document.getElementById("score-btn")
+    scoreBtn.addEventListener("click", function() {
+      const player = data[0]
+      console.log(`${player.name}'s score is ${player.score}`)
+    })
+
+    //  Practicing functions w/arrays
+    function generateSentence(desc, arr) {
+      let sentence = `The ${arr.length} ${desc} are`
+      let lastIndex = arr.length - 1
+      for (let i = 0; i < arr.length; i++) {
+        if (i === lastIndex) {
+          sentence += ` ${arr[i]}`
+        } else {
+          sentence += ` ${arr[i]},`
+        }
+      }
+      return sentence
+    } 
+
+    description = "largest countries"
+    countries = ["China", "India, USA"]
+    console.log(generateSentence(description, countries))
+
+    const imgs = [
+      "img/hip1.jpg",
+      "img/hip2.jpg",
+      "img/hip3.jpg"
+    ]
+
+    teamImagesEl = document.getElementById("team-images-el")
+    teamImages = ""
+    for (let i = 0; i < imgs.length; i++) {
+      teamImages += `<img class="team-img" src="${imgs[i]}" alt="person in company" width="300" height="300"></img>`
+    }
+    
+    teamImagesEl.innerHTML = teamImages
+
+    </script>
+</body>
+</html>
